@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Labb2_Smoke.Content;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,11 +12,17 @@ namespace Labb2_Smoke
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D smokeTexture;
+        SmokeSystem smoke;
 
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
+
+            graphics.PreferredBackBufferWidth = 400;
+            graphics.PreferredBackBufferHeight = 400;
+
             Content.RootDirectory = "Content";
         }
 
@@ -28,6 +35,7 @@ namespace Labb2_Smoke
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            smoke = new SmokeSystem(GraphicsDevice.Viewport);
 
             base.Initialize();
         }
@@ -42,6 +50,7 @@ namespace Labb2_Smoke
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            smokeTexture = Content.Load<Texture2D>("smokepuff");
         }
 
         /// <summary>
@@ -64,6 +73,7 @@ namespace Labb2_Smoke
                 Exit();
 
             // TODO: Add your update logic here
+            smoke.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 
             base.Update(gameTime);
         }
@@ -77,6 +87,7 @@ namespace Labb2_Smoke
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            smoke.Draw(spriteBatch, smokeTexture);
 
             base.Draw(gameTime);
         }
