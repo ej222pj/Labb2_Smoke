@@ -9,7 +9,7 @@ namespace Labb2_Smoke.Content
     class SmokeSystem
     {        
         private Camera camera;
-        private List<SmokeParticle> smokeParticles = new List<SmokeParticle>();
+        private List<SmokeParticle> particles = new List<SmokeParticle>();
         private float totalTime = 0;
         private static float delay = 0.2f;
 
@@ -26,25 +26,25 @@ namespace Labb2_Smoke.Content
             {
                 totalTime = 0;
             
-            smokeParticles.Add(new SmokeParticle());
+            particles.Add(new SmokeParticle());
             }
 
-            for (int i = 0; i < smokeParticles.Count; i++)
+            for (int i = 0; i < particles.Count; i++)
             {
-                smokeParticles[i].Update(timeElapsed);
+                particles[i].Update(timeElapsed);
 
-                if (smokeParticles[i].isDead())
+                if (particles[i].ParticleIsDead())
                 {
-                    smokeParticles[i].Respawn();
+                    particles[i].Respawn();
                 }
             }
         }
 
         public void Draw(SpriteBatch spriteBatch, Texture2D splitterTexture)
         {
-            for (int i = 0; i < smokeParticles.Count; i++)
+            for (int i = 0; i < particles.Count; i++)
             {
-                smokeParticles[i].Draw(spriteBatch, splitterTexture, camera);
+                particles[i].Draw(spriteBatch, splitterTexture, camera);
             }
         }
     }

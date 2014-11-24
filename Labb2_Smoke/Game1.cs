@@ -50,7 +50,7 @@ namespace Labb2_Smoke
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            smokeTexture = Content.Load<Texture2D>("smokepuff");
+            smokeTexture = Content.Load<Texture2D>("particlesmoke");
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Labb2_Smoke
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
             smoke.Draw(spriteBatch, smokeTexture);

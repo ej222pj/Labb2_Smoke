@@ -23,5 +23,4 @@ C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\bin\Windows\Debug\SharpDX
 C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\obj\x86\Debug\Labb2_Smoke.csprojResolveAssemblyReference.cache
 C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\obj\x86\Debug\Labb2_Smoke.exe
 C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\obj\x86\Debug\Labb2_Smoke.pdb
-C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\bin\Windows\Debug\particlesmoke.tga
-C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\bin\Windows\Debug\Content\smokepuff.png
+C:\Users\Eric\Documents\GitHub\Labb2_Smoke\Labb2_Smoke\bin\Windows\Debug\Content\particlesmoke.png

@@ -38,14 +38,14 @@ namespace Labb2_Smoke.Content
             velocity = velocity * ((float)rand.NextDouble() * maxSpeed);
         }
 
-        public bool isDead()
+        public bool ParticleIsDead()
         {
             return timeLived >= maxTimeToLive;
         }
 
         public void Update(float timeElapsed)
         {
-            rotation += 0.01f;
+            rotation += 0.02f;
 
             timeLived += timeElapsed;
             lifePercent = timeLived / maxTimeToLive;
@@ -62,7 +62,6 @@ namespace Labb2_Smoke.Content
 
             velocity = newVel;
             position = newPos;
-
         }
 
         public void Draw(SpriteBatch spriteBatch, Texture2D smokeTexture, Camera camera)
